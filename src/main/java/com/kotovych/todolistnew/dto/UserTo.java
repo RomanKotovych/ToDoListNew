@@ -1,5 +1,6 @@
 package com.kotovych.todolistnew.dto;
 
+import com.kotovych.todolistnew.entity.TaskBoard;
 import lombok.Value;
 
 import java.io.Serializable;

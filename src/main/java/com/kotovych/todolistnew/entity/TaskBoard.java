@@ -1,9 +1,6 @@
 package com.kotovych.todolistnew.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -21,5 +18,7 @@ public class TaskBoard {
     private Long id;
 
     private String title;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Task> taskList = new ArrayList<>();
 }

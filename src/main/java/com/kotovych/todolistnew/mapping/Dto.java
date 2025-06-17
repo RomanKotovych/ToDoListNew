@@ -6,15 +6,15 @@ import com.kotovych.todolistnew.dto.UserTo;
 import com.kotovych.todolistnew.entity.Task;
 import com.kotovych.todolistnew.entity.TaskBoard;
 import com.kotovych.todolistnew.entity.User;
-import org.mapstruct.BeanMapping;
-import org.mapstruct.Mapper;
-import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.*;
+import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
 @Mapper(uses = {Dto.class})
 public interface Dto {
+    Dto MAPPER = Mappers.getMapper(Dto.class);
 
     User toEntity(UserTo userTo);
 

@@ -22,5 +22,6 @@ public class User {
     private String username;
     private String password;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TaskBoard> taskBoardList = new ArrayList<>();
 }
